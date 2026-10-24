@@ -1,0 +1,10 @@
+services:
+  karyalokal:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_WA_NUMBER: ${NEXT_PUBLIC_WA_NUMBER}
+    container_name: karyalokal
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"   # hanya bisa diakses Nginx di host
