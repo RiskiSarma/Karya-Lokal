@@ -7,7 +7,7 @@ const display = Bricolage_Grotesque({ subsets: ["latin"], weight: ["500", "700",
 const body = Instrument_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-body" });
 
 export const metadata: Metadata = {
-  title: "Karya Lokal",
+  title: "KARYALOKAL — Berakar Lokal, Berdampak Global.",
   description:
     "Software development & digital solutions: pembuatan website, aplikasi bisnis, sistem informasi, dan produk digital KasirHub serta Presensi Cafe.",
   openGraph: { title: "KARYALOKAL", description: "Berakar Lokal, Berdampak Global.", locale: "id_ID", type: "website" },
@@ -15,7 +15,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="id" className={`${display.variable} ${body.variable}`}>
+    <html lang="id" className={`${display.variable} ${body.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('mo')" }} />
+      </head>
       <body>
         <Sprite />
         {children}
