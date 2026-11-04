@@ -19,7 +19,7 @@ section{padding:96px 0;scroll-margin-top:72px}
 .progress{display:none;position:fixed;inset:0 0 auto;height:3px;z-index:60;background:linear-gradient(90deg,var(--teal),var(--rust));transform-origin:0 50%}
 @supports (animation-timeline:scroll()){.progress{display:block;animation:grow linear both;animation-timeline:scroll()}}
 
-.nav{position:sticky;top:0;z-index:50;background:rgba(246,250,252,.72);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+.nav{position:sticky;top:0;z-index:50;background:rgba(246,250,252,.96);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
 .nav.scrolled{border-color:var(--line);box-shadow:0 8px 24px -18px rgba(18,48,77,.45)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
 .logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display),sans-serif;font-weight:800;letter-spacing:.14em;color:var(--navy);font-size:18px}
@@ -66,7 +66,7 @@ section{padding:96px 0;scroll-margin-top:72px}
 .ring{position:absolute;inset:0;border:1.5px dashed rgba(18,48,77,.28);border-radius:50%;animation:spin 40s linear infinite}
 .ring::before{content:"";position:absolute;top:-6px;left:50%;width:12px;height:12px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 6px rgba(18,163,180,.2)}
 .visual>img{position:relative;width:44%;animation:float 6s ease-in-out infinite;filter:drop-shadow(0 20px 22px rgba(18,48,77,.28))}
-.chip{position:absolute;display:flex;align-items:center;gap:8px;padding:10px 15px;border-radius:14px;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border:1px solid var(--line);font-weight:600;font-size:14px;color:var(--navy);box-shadow:var(--shadow);animation:float 7s ease-in-out infinite}
+.chip{position:absolute;display:flex;align-items:center;gap:8px;padding:10px 15px;border-radius:14px;background:rgba(255,255,255,.97);border:1px solid var(--line);font-weight:600;font-size:14px;color:var(--navy);box-shadow:var(--shadow);animation:float 7s ease-in-out infinite}
 .chip .i{color:var(--teal-2)}
 .c1{top:7%;left:0}.c2{top:26%;right:-2%;animation-delay:-2s}.c3{bottom:20%;left:-3%;animation-delay:-4s}.c4{bottom:5%;right:6%;animation-delay:-1s}
 
@@ -143,7 +143,7 @@ footer img{height:64px;width:auto}
 @keyframes rise{from{opacity:0;transform:translateY(28px)}}
 @keyframes float{50%{transform:translateY(-12px)}}
 @keyframes spin{to{transform:rotate(360deg)}}
-@keyframes morph{50%{border-radius:58% 42% 40% 60%/45% 58% 42% 55%;transform:rotate(8deg) scale(1.04)}}
+@keyframes morph{50%{transform:rotate(10deg) scale(1.06)}}
 @keyframes shimmer{to{background-position:200% center}}
 @keyframes scroll{to{transform:translateX(-50%)}}
 @keyframes pulse{50%{box-shadow:0 0 0 8px rgba(18,163,180,0)}0%{box-shadow:0 0 0 0 rgba(18,163,180,.5)}}
@@ -227,3 +227,7 @@ a.card h3{margin:6px 0 8px}
 .post-cta{margin-top:48px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
 .post-cta h3{font-size:22px}
 @media(max-width:400px){.nav-end .lang{display:none}}
+
+/* --- Performa: layer GPU untuk elemen beranimasi, hentikan animasi di luar layar --- */
+.blob,.ring,.visual>img,.chip,.track,.progress,.fab{will-change:transform}
+.off,.off *,.off *::before{animation-play-state:paused!important}

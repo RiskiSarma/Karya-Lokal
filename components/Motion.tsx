@@ -16,12 +16,17 @@ export function Motion() {
     );
     document.querySelectorAll<HTMLElement>("[data-r]").forEach((el) => io.observe(el));
 
+    // Hentikan animasi yang berjalan terus (hero, marquee) saat di luar layar supaya scroll ringan.
+    const po = new IntersectionObserver((es) => es.forEach((e) => e.target.classList.toggle("off", !e.isIntersecting)));
+    document.querySelectorAll(".visual,.marquee").forEach((el) => po.observe(el));
+
     const nav = document.querySelector(".nav");
     const onScroll = () => nav?.classList.toggle("scrolled", window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => {
       io.disconnect();
+      po.disconnect();
       window.removeEventListener("scroll", onScroll);
     };
   }, []);
