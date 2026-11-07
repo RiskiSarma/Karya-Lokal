@@ -231,3 +231,5 @@ a.card h3{margin:6px 0 8px}
 /* --- Performa: layer GPU untuk elemen beranimasi, hentikan animasi di luar layar --- */
 .blob,.ring,.visual>img,.chip,.track,.progress,.fab{will-change:transform}
 .off,.off *,.off *::before{animation-play-state:paused!important}
+
+.case .btn{margin-top:18px}

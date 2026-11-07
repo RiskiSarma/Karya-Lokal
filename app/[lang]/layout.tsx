@@ -26,11 +26,18 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 }
 
-export default async function LangLayout({
-  children,
-}: {
-  children: React.ReactNode;
-  params: Promise<{ lang: string }>;
-}) {
-  return <>{children}</>;
+export default async function RootLayout({ children, params }: { children: React.ReactNode; params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  return (
+    <html lang={lang} className={`${display.variable} ${body.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('mo')" }} />
+      </head>
+      <body>
+        <Sprite />
+        <Motion />
+        {children}
+      </body>
+    </html>
+  );
 }

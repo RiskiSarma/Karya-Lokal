@@ -138,6 +138,9 @@ export function Landing({ lang }: { lang: Locale }) {
                     {p.result && (<><dt>{t.projects.labels[2]}</dt><dd>{p.result}</dd></>)}
                   </dl>
                   <ul className="chips">{p.tags.map((x) => <li key={x}>{x}</li>)}</ul>
+                  {links[p.key]?.href && (
+                    <a className="btn ghost sm" href={links[p.key].href} target="_blank" rel="noopener">{t.projects.visit} <Icon n="arrow" /></a>
+                  )}
                 </article>
               ))}
             </div>

@@ -2,7 +2,7 @@ import type { Locale } from "./site";
 
 const id = {
   meta: {
-    title: "Karya Lokal",
+    title: "Karya Lokal ",
     desc: "Software development & digital solutions: pembuatan website, aplikasi bisnis, sistem informasi, dan produk digital KasirHub serta Presensi Cafe.",
     og: "Berakar Lokal, Berdampak Global.",
   },
@@ -52,11 +52,11 @@ const id = {
   projects: {
     tag: "Portofolio", h2: "Hasil kerja yang bisa dilihat.",
     sub: "Masalah yang dihadapi, solusi yang dibangun, dan hasilnya. Studi kasus klien akan ditambahkan seiring proyek selesai.",
-    labels: ["Masalah", "Solusi", "Hasil"],
+    labels: ["Masalah", "Solusi", "Hasil"], visit: "Kunjungi website",
     // result: isi hanya kalau ada hasil nyata; kosong = baris tidak tampil.
     items: [
-      { title: "KasirHub", kind: "Produk sendiri", problem: "Pemilik usaha masih mencatat transaksi dan stok manual sehingga laporan lambat dan sering selisih.", solution: "Aplikasi kasir berbasis web dengan pencatatan transaksi dan laporan penjualan yang tersusun otomatis.", result: "", tags: ["Web app", "Multi-tenant", "Laravel"] },
-      { title: "Presensi Cafe", kind: "Produk sendiri", problem: "Absen kertas di kafe dan warkop rawan titip absen dan merepotkan saat rekap gaji.", solution: "Presensi karyawan berbasis pengenalan wajah dengan rekap kehadiran otomatis per outlet.", result: "", tags: ["Face recognition", "Multi-tenant", "Laravel"] },
+      { key: "kasirhub", title: "KasirHub", kind: "Produk sendiri", problem: "Pemilik usaha masih mencatat transaksi dan stok manual sehingga laporan lambat dan sering selisih.", solution: "Aplikasi kasir berbasis web dengan pencatatan transaksi dan laporan penjualan yang tersusun otomatis.", result: "", tags: ["Web app", "Multi-tenant", "Laravel"] },
+      { key: "presensi", title: "Presensi Cafe", kind: "Produk sendiri", problem: "Absen kertas di kafe dan warkop rawan titip absen dan merepotkan saat rekap gaji.", solution: "Presensi karyawan berbasis pengenalan wajah dengan rekap kehadiran otomatis per outlet.", result: "", tags: ["Face recognition", "Multi-tenant", "Laravel"] },
     ],
   },
   faq: {
@@ -140,10 +140,10 @@ const en: Dict = {
   projects: {
     tag: "Portfolio", h2: "Work you can see.",
     sub: "The problem, the solution we built, and the result. Client case studies will be added as projects complete.",
-    labels: ["Problem", "Solution", "Result"],
+    labels: ["Problem", "Solution", "Result"], visit: "Visit website",
     items: [
-      { title: "KasirHub", kind: "Own product", problem: "Business owners still record sales and stock by hand, so reports are slow and often off.", solution: "A web-based point-of-sale with transaction records and sales reports compiled automatically.", result: "", tags: ["Web app", "Multi-tenant", "Laravel"] },
-      { title: "Presensi Cafe", kind: "Own product", problem: "Paper sign-in at cafes and coffee shops invites buddy punching and makes payroll tallies tedious.", solution: "Face-recognition attendance with automatic attendance summaries per outlet.", result: "", tags: ["Face recognition", "Multi-tenant", "Laravel"] },
+      { key: "kasirhub", title: "KasirHub", kind: "Own product", problem: "Business owners still record sales and stock by hand, so reports are slow and often off.", solution: "A web-based point-of-sale with transaction records and sales reports compiled automatically.", result: "", tags: ["Web app", "Multi-tenant", "Laravel"] },
+      { key: "presensi", title: "Presensi Cafe", kind: "Own product", problem: "Paper sign-in at cafes and coffee shops invites buddy punching and makes payroll tallies tedious.", solution: "Face-recognition attendance with automatic attendance summaries per outlet.", result: "", tags: ["Face recognition", "Multi-tenant", "Laravel"] },
     ],
   },
   faq: {
