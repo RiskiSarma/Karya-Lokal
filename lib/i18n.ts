@@ -90,7 +90,7 @@ export type Dict = typeof id;
 
 const en: Dict = {
   meta: {
-    title: "KARYALOKAL — Rooted Locally, Impacting Globally.",
+    title: "Karya Lokal",
     desc: "Software development & digital solutions: websites, business applications, information systems, and our own products KasirHub and Presensi Cafe.",
     og: "Rooted Locally, Impacting Globally.",
   },
