@@ -2,7 +2,7 @@ import type { Locale } from "./site";
 
 const id = {
   meta: {
-    title: "KARYALOKAL — Berakar Lokal, Berdampak Global.",
+    title: "Karya Lokal",
     desc: "Software development & digital solutions: pembuatan website, aplikasi bisnis, sistem informasi, dan produk digital KasirHub serta Presensi Cafe.",
     og: "Berakar Lokal, Berdampak Global.",
   },

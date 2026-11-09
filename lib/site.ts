@@ -6,5 +6,5 @@ export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:300
 // shot: path screenshot di folder public, mis. "/shots/kasirhub.png". Kosong = kerangka sementara.
 export const links: Record<string, { href: string; shot: string }> = {
   kasirhub: { href: "https://kasirhub.karyalokal.com", shot: "/shots/kasirhub.png" },
-  presensi: { href: "https://presensi.karyalokal.com", shot: "/shots/presensi-cafe.png" },
+  presensi: { href: "https://presensi.karyalokal.com", shot: "/shots/Presensi Cafe.png" },
 };
