@@ -22,6 +22,8 @@ export function Sprite() {
         <symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z" /><circle cx="12" cy="10" r="2.5" /></symbol>
         <symbol id="chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" /></symbol>
         <symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16" /><path d="M4 12h16" /><path d="M4 17h16" /></symbol>
+        <symbol id="check" viewBox="0 0 24 24"><path d="m4.5 12.75 6 6 9-13.5" /></symbol>
+        <symbol id="x" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6l12 12" /></symbol>
         <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14" /><path d="M5 12h14" /></symbol>
       </defs>
     </svg>

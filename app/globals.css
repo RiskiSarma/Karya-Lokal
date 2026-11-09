@@ -233,3 +233,20 @@ a.card h3{margin:6px 0 8px}
 .off,.off *,.off *::before{animation-play-state:paused!important}
 
 .case .btn{margin-top:18px}
+
+/* --- Modal detail produk --- */
+.modal{border:0;padding:0;margin:auto;width:min(680px,calc(100% - 32px));max-height:calc(100dvh - 40px);border-radius:22px;background:#fff;color:var(--ink);overflow:hidden;box-shadow:0 40px 80px -30px rgba(10,25,40,.55)}
+.modal[open]{animation:pop .3s cubic-bezier(.2,.7,.2,1)}
+.modal::backdrop{background:rgba(12,28,44,.6);animation:fade .3s}
+.modal-in{position:relative;display:grid;gap:14px;padding:34px;max-height:calc(100dvh - 40px);overflow:auto}
+.modal-in h3{padding-right:48px;font-size:32px}
+.modal .modal-intro{font-size:17px;color:var(--ink)}
+.modal h4{font-family:var(--font-display),sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-2);margin-top:6px}
+.modal-x{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);background:#fff;color:var(--navy);display:grid;place-items:center;cursor:pointer;transition:border-color .2s,color .2s}
+.modal-x:hover{border-color:var(--teal);color:var(--teal-2)}
+.checks{list-style:none;padding:0;margin:0;display:grid;gap:10px 24px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.checks li{display:flex;gap:10px;align-items:flex-start}
+.checks .i{color:var(--teal-2);margin-top:5px}
+.modal .btn{justify-self:start;margin-top:10px}
+@keyframes pop{from{opacity:0;transform:translateY(24px) scale(.97)}}
+@media(max-width:560px){.modal-in{padding:26px 22px}.modal-in h3{font-size:26px}}

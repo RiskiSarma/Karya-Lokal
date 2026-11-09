@@ -2,7 +2,7 @@ import type { Locale } from "./site";
 
 const id = {
   meta: {
-    title: "Karya Lokal ",
+    title: "KARYALOKAL — Berakar Lokal, Berdampak Global.",
     desc: "Software development & digital solutions: pembuatan website, aplikasi bisnis, sistem informasi, dan produk digital KasirHub serta Presensi Cafe.",
     og: "Berakar Lokal, Berdampak Global.",
   },
@@ -33,10 +33,10 @@ const id = {
   products: {
     tag: "Produk", h2: "Produk yang kami bangun sendiri.",
     sub: "Karyalokal tidak hanya menerima pesanan. Kami juga memakai ilmu yang sama untuk membuat produk digital yang kami pertanggungjawabkan sendiri.",
-    by: "A product by Karyalokal", price: "Lihat paket & harga", ask: "Tanya",
+    by: "A product by Karyalokal", detail: "Lihat detail", close: "Tutup", features: "Fitur utama", stack: "Teknologi", ask: "Tanya produk ini",
     items: [
-      { key: "kasirhub", icon: "receipt", name: "KasirHub", text: "Aplikasi kasir untuk membantu bisnis mengelola transaksi dan operasional dengan lebih tertib." },
-      { key: "presensi", icon: "clock", name: "Presensi Cafe", text: "Presensi karyawan untuk lingkungan usaha seperti kafe dan warkop, tanpa buku absen kertas." },
+      { key: "kasirhub", icon: "receipt", name: "KasirHub", text: "Aplikasi kasir untuk membantu bisnis mengelola transaksi dan operasional dengan lebih tertib.", detail: { intro: "KasirHub adalah aplikasi kasir berbasis web untuk membantu usaha mencatat penjualan dan memantau operasional tanpa pembukuan manual. Satu platform bisa dipakai banyak usaha sekaligus (multi-tenant).", features: ["Manajemen shift kasir", "Dashboard pendapatan", "Kode kupon dan diskon", "Split bill", "Retur dan refund", "Kustomisasi struk", "Program loyalitas yang bisa diaktifkan sesuai kebutuhan", "Ekspor laporan ke Excel"], stack: ["Laravel 12", "Blade", "Alpine.js", "Tailwind CSS", "MySQL"] } },
+      { key: "presensi", icon: "clock", name: "Presensi Cafe", text: "Presensi karyawan untuk lingkungan usaha seperti kafe dan warkop, tanpa buku absen kertas.", detail: { intro: "Presensi Cafe adalah sistem presensi karyawan berbasis pengenalan wajah untuk usaha F&B. Karyawan absen dengan wajahnya sendiri, sehingga titip absen jauh lebih sulit. Satu platform bisa melayani banyak usaha (multi-tenant).", features: ["Presensi dengan pengenalan wajah", "Mencegah titip absen", "Satu platform untuk banyak usaha (multi-tenant)", "Rekap kehadiran karyawan"], stack: ["Laravel 12 (REST API)", "Next.js 14", "TypeScript", "Python FastAPI", "Docker"] } },
     ],
     soon: { badge: "Segera hadir", title: "Produk ketiga Karyalokal", text: "Sedang kami siapkan. Punya masalah usaha yang menurutmu layak dibuatkan aplikasinya? Ceritakan, siapa tahu jadi produk berikutnya.", btn: "Usulkan ide" },
   },
@@ -121,10 +121,10 @@ const en: Dict = {
   products: {
     tag: "Products", h2: "Products we build ourselves.",
     sub: "Karyalokal does not only take orders. We use the same expertise to build digital products we stand behind.",
-    by: "A product by Karyalokal", price: "See plans & pricing", ask: "Ask about",
+    by: "A product by Karyalokal", detail: "View details", close: "Close", features: "Key features", stack: "Technology", ask: "Ask about this product",
     items: [
-      { key: "kasirhub", icon: "receipt", name: "KasirHub", text: "A point-of-sale app that helps businesses manage transactions and operations more neatly." },
-      { key: "presensi", icon: "clock", name: "Presensi Cafe", text: "Employee attendance for places like cafes and coffee shops, without paper sign-in books." },
+      { key: "kasirhub", icon: "receipt", name: "KasirHub", text: "A point-of-sale app that helps businesses manage transactions and operations more neatly.", detail: { intro: "KasirHub is a web-based point-of-sale app that helps businesses record sales and monitor operations without manual bookkeeping. One platform can serve many businesses at once (multi-tenant).", features: ["Cashier shift management", "Revenue dashboard", "Coupon and discount codes", "Split billing", "Returns and refunds", "Receipt customization", "Loyalty program you can switch on as needed", "Excel report export"], stack: ["Laravel 12", "Blade", "Alpine.js", "Tailwind CSS", "MySQL"] } },
+      { key: "presensi", icon: "clock", name: "Presensi Cafe", text: "Employee attendance for places like cafes and coffee shops, without paper sign-in books.", detail: { intro: "Presensi Cafe is a face-recognition attendance system for food and beverage businesses. Employees clock in with their own face, which makes buddy punching much harder. One platform can serve many businesses (multi-tenant).", features: ["Face-recognition attendance", "Prevents buddy punching", "One platform for many businesses (multi-tenant)", "Employee attendance summaries"], stack: ["Laravel 12 (REST API)", "Next.js 14", "TypeScript", "Python FastAPI", "Docker"] } },
     ],
     soon: { badge: "Coming soon", title: "Karyalokal's third product", text: "In the works. Got a business problem you think deserves its own app? Tell us, it might become the next product.", btn: "Suggest an idea" },
   },

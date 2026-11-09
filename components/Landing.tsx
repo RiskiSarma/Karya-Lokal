@@ -4,6 +4,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { WhatsAppFab } from "./WhatsAppFab";
 import { ContactForm } from "./ContactForm";
+import { ProductModal } from "./ProductModal";
 import { dict } from "@/lib/i18n";
 import { links, type Locale } from "@/lib/site";
 
@@ -92,11 +93,7 @@ export function Landing({ lang }: { lang: Locale }) {
                     <span className="by">{t.products.by}</span>
                     <h3><Icon n={p.icon} />{p.name}</h3>
                     <p>{p.text}</p>
-                    {l.href ? (
-                      <a className="btn sm" href={l.href} target="_blank" rel="noopener">{t.products.price} <Icon n="arrow" /></a>
-                    ) : (
-                      <a className="btn sm" href="#kontak">{t.products.ask} {p.name} <Icon n="arrow" /></a>
-                    )}
+                    <ProductModal p={p} t={t.products} />
                   </article>
                 );
               })}
